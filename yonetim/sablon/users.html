@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Kisiler</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Tum Kisiler</h2>
+ 
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Kisi Ad </th>
+        <th>Kisi Soyad</th>
+        <th>Telefon No</th>
+        <th>Eposta Adresi</th> 
+      </tr>
+    </thead>
+    <tbody>
+      {%for user in kisiler%}
+      <tr>
+        <td class='ad'>{{user.adi}}</td>
+        <td class='soyad'>{{user.soyadi}}</td>
+        <td class='telefon'>{{user.telNo}}</td>
+        <td class='email'>{{user.eMail}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
+
